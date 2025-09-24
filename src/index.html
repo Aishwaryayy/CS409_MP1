@@ -11,15 +11,11 @@
 </head>
 <body>
   <div class="bg-video" aria-hidden="true">
-    <iframe
-      src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=1&mute=1&controls=0&rel=0&showinfo=0&loop=1&playlist=dQw4w9WgXcQ&modestbranding=1&playsinline=1"
-      title="Background video"
-      frameborder="0"
-      allow="autoplay; encrypted-media; picture-in-picture"
-      allowfullscreen
-    ></iframe>
-    <div class="bg-video-overlay"></div>
-  </div>
+  <video id="bgvid" autoplay muted loop playsinline>
+    <source src="./assets/bgvid.mp4" type="video/mp4" />
+  </video>
+  <div class="bg-video-overlay"></div>
+</div>
 
 <header id="top">
   <nav id="navbar" class="navbar">

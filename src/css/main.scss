@@ -53,9 +53,14 @@ p { color: $ink-dim; margin: 0.25rem 0 0.75rem; }
 .bg-video {
   position: fixed; inset: 0; z-index: -1; overflow: hidden; pointer-events: none;
 }
-.bg-video iframe {
+.bg-video video {
   position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-  width: 177.78vh; height: 100vh; min-width: 100vw; min-height: 56.25vw; border: 0;
+  width: 177.78vh;      /* 16/9 based cover trick */
+  height: 100vh;
+  min-width: 100vw;
+  min-height: 56.25vw;  /* 9/16 */
+  object-fit: cover;
+  border: 0;
 }
 .bg-video-overlay { position: absolute; inset: 0; background: rgba(0,0,0,.28); }
 
