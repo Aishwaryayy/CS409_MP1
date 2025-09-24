@@ -1,13 +1,133 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>MP1</title>
-    </head>
-    <body>
-        <h1>Hello World! Welcome to MP1!</h1>
-        <img src="assets/image.jpg">
-    </body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MemePage — MP1</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+</head>
+<body>
+  <div class="bg-video" aria-hidden="true">
+    <iframe
+      src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=1&mute=1&controls=0&rel=0&showinfo=0&loop=1&playlist=dQw4w9WgXcQ&modestbranding=1&playsinline=1"
+      title="Background video"
+      frameborder="0"
+      allow="autoplay; encrypted-media; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+    <div class="bg-video-overlay"></div>
+  </div>
+
+<header id="top">
+  <nav id="navbar" class="navbar">
+    <a class="brand" href="#top">MemePage</a>
+    <ul id="nav-links" class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#carousel">Gallery</a></li>
+      <li><a href="#video">Videos</a></li>
+      <li><a href="#parallax">Parallax</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <span class="position-indicator" id="position-indicator"></span>
+  </nav>
+</header>
+
+  <section id="hero" class="stripe stripe-hero">
+    <div class="hero-inner">
+      <h1 class="headline meme-text fade-in">Top Tier Meme Page</h1>
+      
+      <button id="open-modal" class="btn">Open Copypasta Vault</button>
+    </div>
+  </section>
+
+  <section id="about" class="stripe stripe-about center-x">
+    <h2 class="section-title meme-text">Meme Taxonomy</h2>
+    <div class="columns">
+      <div>
+        <h3>Templates</h3>
+        <p>Image + caption. The carousel shows examples.</p>
+      </div>
+      <div>
+        <h3>Copypasta</h3>
+        <p>Reusable text blocks. Find a few inside the modal vault.</p>
+      </div>
+      <div>
+        <h3>Shitposts</h3>
+        <p>Chaotic energy. Reserved for announcements and patch notes.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="carousel" class="stripe stripe-carousel center-x">
+    <h2 class="section-title meme-text">Fresh Drops</h2>
+    <div class="carousel" aria-label="Meme Carousel">
+      <button class="arrow prev" aria-label="Previous slide"><i class="fa-solid fa-chevron-left"></i></button>
+      <div class="track" id="carousel-track">
+        <div class="slide">
+          <img src="./assets/img1.jpg" alt="Meme 1" />
+          <span class="meme-caption meme-text">when css finally centers</span>
+        </div>
+        <div class="slide">
+          <img src="./assets/img2.jpeg" alt="Meme 2" />
+          <span class="meme-caption meme-text">scroll event go brrr</span>
+        </div>
+        <div class="slide">
+          <img src="./assets/img3.jpeg" alt="Meme 3" />
+          <span class="meme-caption meme-text">autoplay muted looped</span>
+        </div>
+      </div>
+      <button class="arrow next" aria-label="Next slide"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+    <div class="dots" id="carousel-dots" aria-label="Carousel dots"></div>
+  </section>
+
+
+  <section id="video" class="stripe stripe-video center-x">
+    <h2 class="section-title meme-text">Meme Compilations</h2>
+
+<video controls width="960" class="video">
+      <source src="./assets/memevid.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    
+  </section>
+
+  <section id="parallax" class="stripe stripe-parallax center-x">
+    <h2 class="section-title meme-text">Parallax Zone</h2>
+    <p class="parallax-copy">fixed background, much wow</p>
+  </section>
+
+  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-content">
+      <button id="close-modal" class="modal-close" aria-label="Close modal"><i class="fa-solid fa-xmark"></i></button>
+      <h3 class="modal-title meme-text">Copypasta Vault</h3>
+      <ul class="vault">
+        <li>“Sir, this is a Wendy’s.”</li>
+        <li>“I fear no man. But that thing… it scares me.”</li>
+        <li>“My disappointment is immeasurable and my day is ruined.”</li>
+      </ul>
+    </div>
+  </div>
+
+  <section id="contact" class="stripe stripe-contact center-x">
+    <h2 class="section-title meme-text">Contact Me</h2>
+    <div class="social">
+      <a href="#" aria-label="Reddit"><i class="fa-brands fa-reddit-alien"></i></a>
+      <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+      <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+  </section>
+
+  <footer class="stripe stripe-footer center-x">
+    <p>&copy; <span id="year"></span> MemePage • all rights reserved</p>
+  </footer>
+
+  <script src="./index.js" type="module"></script>
+</body> 
 </html>
